@@ -1,4 +1,12 @@
-Import-Module NetAdapter
+ Import-Module NetAdapter
+
+if ((Get-Process "CertificationServer" -ea SilentlyContinue) -eq $Null) {
+    Exit 1
+}
+
+if ((Get-Process "smc" -ea SilentlyContinue) -eq $Null) {
+    Exit 1
+}
 
 $ipPath = 'C:\silk\VSROExecutor\ip.txt'
 $exists = [System.IO.File]::Exists($ipPath)
@@ -55,4 +63,4 @@ if (!$exists) {
         $startVSROPath = 'C:\silk\VSROExecutor\startVSRO.bat'
         start $startVSROPath
     }
-}
+} 
