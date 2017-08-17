@@ -1,7 +1,5 @@
 @echo off
 
-echo TODO GET IP
-
 del "C:\silk\cert_server\Server Files\*.dmp"
 
 CD "C:\silk\VSROExecutor"
