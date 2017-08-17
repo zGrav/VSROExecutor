@@ -53,6 +53,6 @@ if (!$exists) {
         echo "Changes made, relaunching!"
         
         $startVSROPath = 'C:\silk\VSROExecutor\startVSRO.bat'
-        start "startVSRO.bat"
+        start $startVSROPath
     }
 }
